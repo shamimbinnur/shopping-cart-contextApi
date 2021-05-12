@@ -19,7 +19,7 @@ export const productData = [
         id: 33,
         title: "iPhone 12 Pro",
         category: "Mobile",
-        Price: 9000000,
+        price: 9000000,
         available: true,
         addedToCart: false,
     },

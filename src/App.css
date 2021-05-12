@@ -2,12 +2,6 @@
   margin: 0%;
   padding: 0%;
 }
-.App{
-  display: flex;
-}
-.productSection{
-  flex-grow: 1;
-}
-.cartSection{
-  flex-grow: 1;
+body{
+  font-family: 'KoHo', sans-serif;
 }

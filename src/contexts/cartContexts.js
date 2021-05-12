@@ -21,13 +21,39 @@ const reducer = (cart, action) => {
                 })
             }
 
-        case 'change':
+        case 'decrease':
             return cart.map(item => {
-                return { ...item, complete: !item.complete }
+                if (item.id === action.payload.product.id) {
+                    if (item.qty > 1) {
+                        return {
+                            ...action.payload.product,
+                            qty: item.qty - 1
+                        }
+                    }
+                    else return item
+                }
+                else return item
             })
+
+        case 'increase':
+            return cart.map(item => {
+                if (item.id === action.payload.product.id) {
+                    return {
+                        ...action.payload.product,
+                        qty: item.qty + 1
+                    }
+                }
+                else return item
+
+            })
+
+        case 'remove':
+            return cart.filter((item) => item.id !== action.payload.product.id)
+
         default: return cart
     }
 }
+
 
 const CartContext = createContext(null);
 export const useCartContext = () => {
@@ -38,9 +64,14 @@ export const useCartContext = () => {
 
 export const ContextProvider = ({ children }) => {
     const [cart, dispatch] = useReducer(reducer, [])
+    const totalPrice = cart.reduce((prev, current) => {
+        return prev + (current.price * current.qty)
+
+    }, 0)
+
 
     return (
-        <CartContext.Provider value={{ cart, dispatch }}>
+        <CartContext.Provider value={{ cart, dispatch, totalPrice }}>
             {children}
         </CartContext.Provider>
     )
