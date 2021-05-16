@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { useCartContext } from '../contexts/cartContexts';
 import styled from 'styled-components'
 
