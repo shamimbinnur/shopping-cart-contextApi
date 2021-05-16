@@ -38,6 +38,7 @@ const StyledTitle = styled.div`
     `
 const StyledPrice = styled.div`
     font-size: 15px;
+    margin: 5px 0 0 0;
 
 `
 const StyledCategory = styled.div`
@@ -48,12 +49,12 @@ const StyledActionArea = styled.div`
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    margin: 15px 0 0 0;
 `
 const StyledAddButton = styled.button`
     border:none;
     cursor: pointer;
     width: 100%;
-    margin-top: 10px;
 `
 
 export default SingleProduct

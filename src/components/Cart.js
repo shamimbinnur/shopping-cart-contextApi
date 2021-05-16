@@ -15,12 +15,19 @@ function Cart() {
                     ))
                 }
             </StyledWrapper>
-            <StyledTotalWrapper>
-                {`Total: ${totalPrice} Taka`}
-            </StyledTotalWrapper>
-            <StyledBtn>
-                Pay now
-            </StyledBtn>
+
+            {
+                totalPrice > 0 &&
+                (<StyledTotalWrapper>
+                    {`Total: ${totalPrice} Taka`}
+                </StyledTotalWrapper>)
+            }
+            {
+                totalPrice > 0 &&
+                (<StyledBtn>
+                    Pay now
+                </StyledBtn>)
+            }
         </StyledContainer>
     )
 }

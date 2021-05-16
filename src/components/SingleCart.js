@@ -7,12 +7,12 @@ function SingleCart({ product }) {
 
     return (
         <StyledCard>
-            <div className="productTitle">
+            <StyledTitle>
                 {product.title}
-            </div>
-            <div className="price">
+            </StyledTitle>
+            <StyledPrice>
                 {`Price: ${product.qty} x ${product.price}`}
-            </div>
+            </StyledPrice>
             <StyledBtnWrapper>
                 <StyledBtn onClick={() => dispatch({ type: "increase", payload: { product: product } })}> + </StyledBtn>
                 <StyledBtn onClick={() => dispatch({ type: "decrease", payload: { product: product } })}> - </StyledBtn>
@@ -28,11 +28,18 @@ const StyledCard = styled.div`
     border: 1px solid black;
     border-radius: 5px;
     margin: 10px;
-    padding: 5px;
+    padding: 10px;
 `
 const StyledBtnWrapper = styled.div`
     margin: 5px 0px;
 `
+const StyledTitle = styled.div`
+    font-size: 16px;
+    `
+const StyledPrice = styled.div`
+    font-size: 12px;
+    `
+
 const StyledBtn = styled.button`
     min-width: 20px;
     margin-right: 5px;

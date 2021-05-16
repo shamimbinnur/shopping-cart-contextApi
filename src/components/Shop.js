@@ -38,7 +38,6 @@ const StyledContainer = styled.div`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 10px 50px;
 `
 const StyledWrapper = styled.div`
     min-height: 20px;
