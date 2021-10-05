@@ -1,3 +1,10 @@
+// 	AUTHOR:		SHAMIM BIN NUR
+// 	GITHUB:		https://github.com/shamimbinnur
+// 	LINKEDIN:	https://www.linkedin.com/in/shamimbinnur
+// 	MAIL:		iamshamimbn@gmail.com
+// 	SITE:		www.shamimbinnur.me
+
+
 import React, { useState } from 'react';
 import SingleProduct from './SingleProduct';
 import { productData } from '../utils/data'
